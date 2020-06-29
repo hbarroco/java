@@ -16,6 +16,9 @@
  */
 package org.jboss.as.quickstarts.wshelloworld;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,14 +33,20 @@ import javax.jws.WebService;
     targetNamespace = "http://www.jboss.org/eap/quickstarts/wshelloworld/HelloWorld")
 public class HelloWorldServiceImpl implements HelloWorldService {
 
+    private final static Logger logger = LoggerFactory.getLogger(HelloWorldServiceImpl.class);
+
     @Override
     public String sayHello() {
+
+        logger.info("teste abcd");
 
         return "Hello World!";
     }
 
     @Override
     public String sayHelloToName(final String name) {
+
+        logger.info("teste abcd");
 
         /* Create a list with just the one value */
         final List<String> names = new ArrayList<>();
