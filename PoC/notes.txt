@@ -4,5 +4,5 @@
 sudo docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=mysql -d mysql:latest
 docker inspect 4a833613b04c | grep IPAddress
 
-
+Run maven spring boot: ./mvnw spring-boot:run
 Change the java version ubuntu: sudo update-alternatives --config java
