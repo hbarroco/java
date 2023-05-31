@@ -1,8 +1,22 @@
+Tools and Commands
 
--- Guides: https://hevodata.com/learn/spring-boot-rest-api/#s2
--- https://hub.docker.com/_/mysql
-sudo docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=mysql -d mysql:latest
-docker inspect 4a833613b04c | grep IPAddress
+-> DB: Mysql by docker
+--> https://hub.docker.com/_/mysql
 
-Run maven spring boot: ./mvnw spring-boot:run
-Change the java version ubuntu: sudo update-alternatives --config java
+-> Spring IO (create project)
+--> https://start.spring.io/
+
+-> Sample
+--> https://hevodata.com/learn/spring-boot-rest-api/#s2
+
+-> Commands
+--> Docker
+---> sudo docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=mysql -d mysql:latest
+---> docker inspect 4a833613b04c | grep IPAddress
+--> Maven
+---> Run maven spring boot: ./mvnw spring-boot:run
+---> Run and Enable Debug Port: mvn spring-boot:run -Dspring-boot.run.jvmArguments="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=9091"
+
+-> Others
+--> Change the java version ubuntu: sudo update-alternatives --config java
+

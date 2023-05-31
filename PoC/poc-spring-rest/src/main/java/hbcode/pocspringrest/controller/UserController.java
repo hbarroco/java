@@ -1,10 +1,13 @@
-package hbcode.pocspringrest;
+package hbcode.pocspringrest.controller;
 
+import hbcode.pocspringrest.model.User;
+import hbcode.pocspringrest.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -15,8 +18,14 @@ public class UserController {
     private UserRepository userRepository;
 
     @GetMapping
-    public Iterable<User> findAllUsers() {
-        return userRepository.findAll();
+    public List<User> findAllUsers() {
+        return (List<User>) userRepository.findAll();
+        /*List<User> users = new ArrayList<>();
+        User user = new User();
+        user.setId(1);
+        user.setName("Juca");
+        users.add(user);
+        return users;*/
     }
 
     @GetMapping("/{id}")

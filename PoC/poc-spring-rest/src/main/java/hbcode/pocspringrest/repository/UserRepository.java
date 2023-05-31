@@ -1,5 +1,6 @@
-package hbcode.pocspringrest;
+package hbcode.pocspringrest.repository;
 
+import hbcode.pocspringrest.model.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
