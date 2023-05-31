@@ -1,0 +1,8 @@
+
+-- Guides: https://hevodata.com/learn/spring-boot-rest-api/#s2
+-- https://hub.docker.com/_/mysql
+sudo docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=mysql -d mysql:latest
+docker inspect 4a833613b04c | grep IPAddress
+
+
+Change the java version ubuntu: sudo update-alternatives --config java
